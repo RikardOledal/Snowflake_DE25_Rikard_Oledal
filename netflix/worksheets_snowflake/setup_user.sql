@@ -1,7 +1,0 @@
-USE ROLE USERADMIN;
-
-CREATE ROLE IF NOT EXISTS movies_dlt_role;
-
-CREATE USER IF NOT EXISTS extract_loader
-    PASSWORD = 'dogcat'
-    DEFAULT_WAREHOUSE = dev_wh;
