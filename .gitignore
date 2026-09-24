@@ -219,3 +219,8 @@ __marimo__/
 
 .dlt
 setup_user*
+
+target/
+dbt_packages/
+logs/
+.env

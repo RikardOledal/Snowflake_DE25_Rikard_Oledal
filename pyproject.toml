@@ -12,6 +12,7 @@ dependencies = [
     "dlt[parquet,snowflake]>=1.30.0",
     "ipykernel>=7.3.0",
     "dbt-snowflake>=1.12.1",
+    "dbt-core>=1.12.5",
 ]
 
 [project.scripts]
