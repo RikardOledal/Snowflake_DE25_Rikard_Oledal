@@ -20,14 +20,14 @@ def jobads_resource(params):
     for ad in _get_ads(url_for_search, params).get("hits"):
         yield ad
 
-def run_pipeline(query, table_name):
+def run_pipeline(table_name):
     pipeline = dlt.pipeline(
         pipeline_name="jobsearch",
         destination="snowflake",
         dataset_name="staging"
     )
 
-    params = {'q': query, 'limit': 100}
+    params = {'limit': 100, "occupation_field": "6Hq3_tKo_V57"}
 
     load_info = pipeline.run(jobads_resource(params=params), table_name=table_name)
     print(load_info)
@@ -36,7 +36,4 @@ if __name__ == "__main__":
     working_directory = Path(__file__).parent
     os.chdir(working_directory)
 
-    query = "data engineer stockholm"
-    table_name = "data_field_job_ads"
-
-    run_pipeline(query, table_name)
+    run_pipeline(table_name="technical_field_job_ads")
