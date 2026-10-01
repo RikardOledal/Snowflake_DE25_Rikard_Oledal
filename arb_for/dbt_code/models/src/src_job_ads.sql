@@ -7,6 +7,8 @@ SELECT
     employer__organization_number,
     number_of_vacancies AS vacancies,
     relevance,
-    application_deadline
+    application_deadline,
+    workplace_address__municipality,
+    employer__workplace
 FROM stg_job_ads
 ORDER BY application_deadline
