@@ -1,8 +1,12 @@
 models:
 
+  - name: dim_occupation
+    description: "The dimension is a collection of unique occupation"
+
   - name: fct_job_ads
     columns:
       - name: occupation_id
+        description: "The facts are relevance and vacancies."
         data_tests:
           - relationships:
               to: ref('dim_occupation')
