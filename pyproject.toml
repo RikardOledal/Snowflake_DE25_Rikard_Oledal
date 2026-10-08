@@ -18,6 +18,7 @@ dependencies = [
     "snowflake-connector-python>=4.7.3",
     "dagster-dlt>=0.29.25",
     "dagster-dbt>=0.29.25",
+    "dagster-webserver>=1.13.25",
 ]
 
 [project.scripts]

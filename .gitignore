@@ -224,3 +224,6 @@ target/
 dbt_packages/
 logs/
 .env
+
+# dagster
+**/.tmp*/
